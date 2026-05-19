@@ -26,7 +26,6 @@ session_start();
         <nav>
             <ul class="menu">
                 <li><a href="<?= BASE_URL ?>index.php">Inicio</a></li>
-                <li><a href="<?= BASE_URL ?>acerca_de.php">Acerca de</a></li>
                 <li><a href="<?= BASE_URL ?>productos.php">Productos</a></li>
                 <li><a href="<?= BASE_URL ?>contacto.php">Contacto</a></li>
 
@@ -37,6 +36,7 @@ session_start();
                     echo '<li><a href="login.php">Login</a></li>';
                 }
                 ?>
+                <li><a href="<?= BASE_URL ?>carrito.php">Carrito</a></li>
                 <?php
                 if ($_SESSION['rol'] == 'admin') {
                     echo '<li><a href="admin/productos_admin.php">Panel Admin</a></li>';
