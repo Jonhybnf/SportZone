@@ -38,8 +38,10 @@ session_start();
                 ?>
                 <li><a href="<?= BASE_URL ?>carrito.php">Carrito</a></li>
                 <?php
-                if ($_SESSION['rol'] == 'admin') {
-                    echo '<li><a href="admin/productos_admin.php">Panel Admin</a></li>';
+                if (isset($_SESSION['rol'])) {
+                    if ($_SESSION['rol'] == 'admin') {
+                        echo '<li><a href="admin/productos_admin.php">Panel Admin</a></li>';
+                    }
                 }
                 ?>
             </ul>
